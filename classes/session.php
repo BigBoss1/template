@@ -2,20 +2,20 @@
 
 class Session
 {
-	static $cookie_name = "SPR2016";
-	static $session_dir = "sessions/";
-	static $data = array();
-	static $session_started = false;
-	static $uid;
+	static public $cookie_name = "SPR2016";
+	static public $session_dir = "sessions/";
+	static public $data = array();
+	static public $session_started = false;
+	static public $uid = "";
 
 	static public function start_session()
 	{
-		if (isset($_COOKIE[Session::$cookie_name]))
-			Session::restore_session(Session::$cookie_name);
+        if (isset($_COOKIE[Session::$cookie_name]))
+			Session::restore_session();
 		else
 		{
-			$uid = md5(microtime(true));
-			setcookie(Session::$cookie_name, $uid);
+			Session::$uid = md5(microtime(true));
+			setcookie(Session::$cookie_name, Session::$uid);
 		}
 	}
 
@@ -27,7 +27,7 @@ class Session
 
 	static public function restore_session()
 	{
-		Session::$data = unserialize(file_get_contents(Session::$session_dir . Session::$uid))
+		Session::$data = unserialize(file_get_contents(Session::$session_dir . Session::$uid));
 	}
 
 	static public function set($name, $value)
@@ -42,5 +42,7 @@ class Session
 		return Session::$data[$name];
 	}
 }
+
+
 
 ?>

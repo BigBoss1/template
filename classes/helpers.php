@@ -1,11 +1,11 @@
 <?php
 
-function get_or_post($key, $value = "")
+function get_or_post($name, $value = "")
 {
-	if (isset($_GET[$key]))
-		return $_GET[$key];
-	if (isset($_POST[$key]))
-		return $_POST[$key];
+	if (isset($_GET[$name]))
+		return $_GET[$name];
+	if (isset($_POST[$name]))
+		return $_POST[$name];
 	return $value;
 }
 

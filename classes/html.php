@@ -72,8 +72,10 @@ class HTML
 	{
 		HTML::$css = array_unique(HTML::$css);
 		foreach (HTML::$js as $name)
-			echo "<link rel='stylesheet' href='css/" . $name . "'></script>";
+			echo "<link rel='stylesheet' href='css/" . $name . "' />";
 	}
 }
+
+ini_set('error_reporting', 'E_ALL');
 
 ?>

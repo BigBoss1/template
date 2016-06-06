@@ -1,12 +1,6 @@
-<?php
-
-$title = $args[0];
-
-?>
-
 <html>
 <head>
-	<title><?php echo $title; ?></title>
+	<title><?php echo $args[0]; ?></title>
 </head>
 
 <body>
