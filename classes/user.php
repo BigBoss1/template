@@ -1,40 +1,78 @@
 <?php
 
 include("classes/session.php");
+include("classes/db.php");
 
 class User
 {
-	static public $authorized = false;
-	static public function get_from_session()
+	private $authenticated;
+    private $profile;
+    static $session_key = "user_info";
+
+    function __construct()
+    {
+        $this->get_from_session();
+    }
+
+    function __destruct()
+    {
+        $this->set_session();
+    }
+
+	function get_from_session()
 	{
-		$data = Session::get("user");
-		User::$authorized = $data['authorized'];
-		print(User::$authorized);
+		if (!Session::$started)
+        {
+            $this->fill_unauth();
+            return false;
+        }
+
+        if (($sess_data = Session::get(User::$session_key)) === null)
+        {
+            $this->fill_unauth();
+            return false;
+        }
+
+        $this->authenticated = $sess_data['authenticated'];
+        $this->profile = $sess_data['profile'];
+
+        return $this->authenticated;
 	}
 
-	static public function check_auth($login, $pass)
+	function set_session()
 	{
-		$temp = explode("\n", file_get_contents(".htauth"));
-
-		foreach ($temp as $t)
-			if ($t == $login . ":" . $pass)
-			{
-				User::$authorized = true;
-				User::set_to_session();
-				Session::store_session();
-				return 0;
-			}
-
-		return 0;
+		Session::set(User::$session_key,
+            array('authenticated' => $this->authenticated, 'profile' => $this->profile));
 	}
 
-	static public function set_to_session()
-	{
-		Session::set("user", array('authorized' => User::$authorized));
-	}
+    function fill_unauth()
+    {
+        $this->authenticated = false;
+        $this->profile = array();
+    }
+
+    function authorize($login, $password)
+    {
+        global $db;
+
+        if (($this->profile = $db->check_auth($login, $password)) !== null)
+        {
+            $this->authenticated = true;
+            $this->set_session();
+            return true;
+        }
+
+        $this->fill_unauth();
+        return false;
+    }
+
+    function is_auth()
+    {
+        return $this->authenticated;
+    }
 }
 
-User::get_from_session();
+$user = new User();
 
 ?>
 

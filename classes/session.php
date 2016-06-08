@@ -5,7 +5,7 @@ class Session
 	static public $cookie_name = "SPR2016";
 	static public $session_dir = "sessions/";
 	static public $data = array();
-	static public $session_started = false;
+	static public $started = false;
 	static public $uid = "";
 
 	static public function start_session()
@@ -16,13 +16,15 @@ class Session
 		{
 			Session::$uid = md5(microtime(true));
 			setcookie(Session::$cookie_name, Session::$uid);
-			Session::store_session();
 		}
+		Session::$started = true;
 	}
 
 	static public function store_session()
 	{
-		if (file_put_contents(Session::$session_dir.Session::$uid, serialize(Session::$data)) === false)
+		if (!Session::$started)
+			return;
+		if (file_put_contents(Session::$session_dir . Session::$uid, serialize(Session::$data)) === false)
 			die("Couldn't save session data.");
 	}
 
