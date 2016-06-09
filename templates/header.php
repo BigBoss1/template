@@ -4,3 +4,4 @@
 </head>
 
 <body>
+<?php echo Menu::get_menu_html(); ?>

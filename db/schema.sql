@@ -6,6 +6,7 @@ CREATE TABLE users(
   passwd text,
   name text,
   email text,
+  is_admin bool DEFAULT FALSE,
   reg_date date,
   last_login timestamp DEFAULT NULL,
   disabled bool DEFAULT FALSE,

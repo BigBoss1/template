@@ -1,7 +1,8 @@
 <?php
 
-include("classes/helpers.php");
-include("classes/user.php");
+require_once("classes/helpers.php");
+
+global $user;
 
 $x = intval(get_or_post("x"));
 $y = intval(get_or_post("y"));
@@ -9,11 +10,10 @@ $y = intval(get_or_post("y"));
 ?>
 
 <h1>Таблица умножения</h1>
+
 <?php
 
-if ($user->is_auth())
-	echo "<a href='login.php?act=logout'>Выйти</a></p>";
-else
+if (!$user->is_auth())
 	echo "<p>Для использования таблицы с числами большими 5, необходимо <a href='login.php'>войти</a>.</p>";
 
 ?>
@@ -29,11 +29,11 @@ if (($x > 5 || $y > 5) && !$user->is_auth())
 	echo "Нужна авторизация.";
 else
 {
-	echo "<table>";
+	echo "<table border='1px' cellpadding='5px' text='center'>";
 
 	for ($j = 1; $j <= $y; $j++)
 	{
-		echo "<tr>";
+		echo "<tr align='center'>";
 		for ($i = 1; $i <= $x; $i++)
 			echo "<td>" . $i * $j . "</td>";
 		echo "</tr>";
