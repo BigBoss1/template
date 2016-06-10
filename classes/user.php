@@ -73,7 +73,30 @@ class User
     function update_profile($params)
     {
         global $db;
-        $db->update_profile($params);
+        if ($db->update_profile($params))
+        {
+            foreach ($params as $k => $v) {
+                $this->profile[$k] = $params[$k];
+            }
+            $this->set_session();
+            return true;
+        }
+        return false;
+    }
+
+    function create_profile($params)
+    {
+        global $db;
+        if ($db->create_profile($params))
+        {
+            $this->authenticated = true;
+            foreach ($params as $k => $v) {
+                $this->profile[$k] = $params[$k];
+            }
+            $this->set_session();
+            return true;
+        }
+        return false;
     }
 
     function is_auth()

@@ -7,6 +7,7 @@ class Menu
         array("name" => "Профиль", "url" => "profile.php", "allowed" => false),
         array("name" => "Список пользователей", "url" => "users_list.php", "allowed" => false),
         array("name" => "Вход", "url" => "login.php", "allowed" => true),
+        array("name" => "Регистрация", "url" => "sign_up.php", "allowed" => true),
         array("name" => "Выход", "url" => "login.php?act=logout", "allowed" => false)
     );
 
@@ -20,7 +21,8 @@ class Menu
             if ($user->is_admin())
                 Menu::$menu[2]['allowed'] = true;
             Menu::$menu[3]['allowed'] = false;
-            Menu::$menu[4]['allowed'] = true;
+            Menu::$menu[4]['allowed'] = false;
+            Menu::$menu[5]['allowed'] = true;
         }
         $html = "<p>";
 

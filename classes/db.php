@@ -47,7 +47,14 @@ class DB
 
     function update_profile($params)
     {
-        pg_query_params($this->conn, "UPDATE users SET login=$2, passwd=$3, name=$4, email=$5 WHERE id=$1", $params);
+        return pg_query_params($this->conn,
+            "UPDATE users SET login=$2, passwd=$3, name=$4, email=$5 WHERE id=$1", $params);
+    }
+
+    function create_profile($params)
+    {
+        return pg_query_params($this->conn,
+            "INSERT INTO users (login, passwd, name, email, reg_date) VALUES($1, $2, $3, $4, $5)", $params);
     }
 }
 

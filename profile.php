@@ -20,7 +20,8 @@ if (get_or_post("act") == "edit")
         "email" => get_or_post("email", $profile['email'])
     );
 
-    $user->update_profile($params);
+    if ($user->update_profile($params))
+        header("Location: profile.php");
 }
 
 HTML::header($profile['name']);
