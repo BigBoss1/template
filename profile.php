@@ -12,15 +12,11 @@ $profile = $user->get_profile();
 
 if (get_or_post("act") == "edit")
 {
-    $params = array(
-        "id" => $profile['id'],
-        "login" => get_or_post("login", $profile['login']),
-        "passwd" => get_or_post("passwd", $profile['passwd']),
-        "name" => get_or_post("name", $profile['name']),
-        "email" => get_or_post("email", $profile['email'])
-    );
-
-    if ($user->update_profile($params))
+    if ($user->update_profile(
+        get_or_post("login", $profile['login']),
+        get_or_post("passwd"),
+        get_or_post("name", $profile['name']),
+        get_or_post("email", $profile['email'])))
         header("Location: profile.php");
 }
 

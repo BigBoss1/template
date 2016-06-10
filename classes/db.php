@@ -40,21 +40,28 @@ class DB
 
     function check_auth($login, $passwd)
     {
-        $resource = pg_query_params($this->conn, "SELECT id, login, passwd, name, email, is_admin, reg_date, last_login
-            FROM users WHERE login=$1 AND passwd=$2 AND NOT disabled", array($login, $passwd));
+        $resource = pg_query_params($this->conn, "SELECT id, login, name, email, is_admin, reg_date, last_login
+            FROM users WHERE login=$1 AND passwd=$2 AND NOT disabled", array($login, md5($passwd)));
         return $this->one_row($resource);
     }
 
-    function update_profile($params)
+    function update_profile($id, $login, $passwd, $name, $email)
     {
-        return pg_query_params($this->conn,
-            "UPDATE users SET login=$2, passwd=$3, name=$4, email=$5 WHERE id=$1", $params);
+        if ($passwd)
+            return pg_query_params($this->conn,
+                "UPDATE users SET login=$2, passwd=$3, name=$4, email=$5 WHERE id=$1",
+                array($id, $login, md5($passwd), $name, $email));
+        else
+            return pg_query_params($this->conn,
+                "UPDATE users SET login=$2, name=$3, email=$4 WHERE id=$1",
+                array($id, $login, $name, $email));
     }
 
-    function create_profile($params)
+    function create_profile($login, $passwd, $name, $email, $reg_date)
     {
         return pg_query_params($this->conn,
-            "INSERT INTO users (login, passwd, name, email, reg_date) VALUES($1, $2, $3, $4, $5)", $params);
+            "INSERT INTO users (login, passwd, name, email, reg_date) VALUES($1, $2, $3, $4, $5)",
+            array($login, md5($passwd), $name, $email, $reg_date));
     }
 }
 

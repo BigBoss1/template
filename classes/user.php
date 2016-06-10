@@ -21,7 +21,6 @@ class User
 
 	function get_from_session()
 	{
-        //Load user data from session
 		if (!Session::$started)
         {
             $this->fill_unauth();
@@ -42,21 +41,18 @@ class User
 
 	function set_session()
 	{
-        //Set user data to session
 		Session::set(User::$session_key,
             array('authenticated' => $this->authenticated, 'profile' => $this->profile));
 	}
 
     function fill_unauth()
     {
-        //Data for unauthenticated users
         $this->authenticated = false;
         $this->profile = array();
     }
 
     function authorize($login, $password)
     {
-        //Authorize users
         global $db;
 
         if (($this->profile = $db->check_auth($login, $password)) !== null)
@@ -70,29 +66,32 @@ class User
         return false;
     }
 
-    function update_profile($params)
+    function update_profile($login, $passwd, $name, $email)
     {
         global $db;
-        if ($db->update_profile($params))
+
+        if ($db->update_profile($this->profile['id'], $login, $passwd, $name, $email))
         {
-            foreach ($params as $k => $v) {
-                $this->profile[$k] = $params[$k];
-            }
+            $this->profile['login'] = $login;
+            $this->profile['name'] = $name;
+            $this->profile['email'] = $email;
             $this->set_session();
             return true;
         }
         return false;
     }
 
-    function create_profile($params)
+    function create_profile($login, $passwd, $name, $email, $reg_date)
     {
         global $db;
-        if ($db->create_profile($params))
+
+        if ($db->create_profile($login, $passwd, $name, $email, $reg_date))
         {
             $this->authenticated = true;
-            foreach ($params as $k => $v) {
-                $this->profile[$k] = $params[$k];
-            }
+            $this->profile['login'] = $login;
+            $this->profile['name'] = $name;
+            $this->profile['email'] = $email;
+            $this->profile['reg_date'] = $reg_date;
             $this->set_session();
             return true;
         }
@@ -101,7 +100,6 @@ class User
 
     function is_auth()
     {
-        //Check users's authorization
         return $this->authenticated;
     }
 
@@ -112,7 +110,6 @@ class User
 
     function get_profile()
     {
-        //Get user's profile
         return $this->profile;
     }
 }

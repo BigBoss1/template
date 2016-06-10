@@ -3,32 +3,30 @@
 class Menu
 {
     static $menu = array(
-        array("name" => "Главная", "url" => "index.php", "allowed" => true),
-        array("name" => "Профиль", "url" => "profile.php", "allowed" => false),
-        array("name" => "Список пользователей", "url" => "users_list.php", "allowed" => false),
-        array("name" => "Вход", "url" => "login.php", "allowed" => true),
-        array("name" => "Регистрация", "url" => "sign_up.php", "allowed" => true),
-        array("name" => "Выход", "url" => "login.php?act=logout", "allowed" => false)
+        array("name" => "Главная", "url" => "index.php", "allowed" => "all"),
+        array("name" => "Профиль", "url" => "profile.php", "allowed" => "users"),
+        array("name" => "Список пользователей", "url" => "users_list.php", "allowed" => "admins"),
+        array("name" => "Вход", "url" => "login.php", "allowed" => "guests"),
+        array("name" => "Регистрация", "url" => "registration.php", "allowed" => "guests"),
+        array("name" => "Выход", "url" => "login.php?act=logout", "allowed" => "users")
     );
 
     static function get_menu_html()
     {
         global $user;
 
-        if ($user->is_auth())
-        {
-            Menu::$menu[1]['allowed'] = true;
-            if ($user->is_admin())
-                Menu::$menu[2]['allowed'] = true;
-            Menu::$menu[3]['allowed'] = false;
-            Menu::$menu[4]['allowed'] = false;
-            Menu::$menu[5]['allowed'] = true;
-        }
         $html = "<p>";
 
         foreach (Menu::$menu as $m)
         {
-            if ($m['allowed'])
+            if ($m['allowed'] == "all")
+                $html .= "<a href='" . $m['url'] . "'>" . $m['name'] . "</a> | ";
+            elseif ($user->is_auth())
+            {
+                if ($m['allowed'] == "users" || ($user->is_admin() && $m['allowed'] == "admins"))
+                    $html .= "<a href='" . $m['url'] . "'>" . $m['name'] . "</a> | ";
+            }
+            elseif ($m['allowed'] == "guests")
                 $html .= "<a href='" . $m['url'] . "'>" . $m['name'] . "</a> | ";
         }
 

@@ -29,13 +29,13 @@ if (($x > 5 || $y > 5) && !$user->is_auth())
 	echo "Нужна авторизация.";
 else
 {
-	echo "<table border='1px' cellpadding='5px' text='center'>";
+	echo "<table border='1px' cellpadding='5px'>";
 
 	for ($j = 1; $j <= $y; $j++)
 	{
 		echo "<tr align='center'>";
 		for ($i = 1; $i <= $x; $i++)
-			echo "<td>" . $i * $j . "</td>";
+			echo "<td title='". $i . " * " . $j. "'>" . $i * $j . "</td>";
 		echo "</tr>";
 	}
 
@@ -43,3 +43,4 @@ else
 }
 
 ?>
+
