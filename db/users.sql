@@ -22,16 +22,17 @@ CREATE OR REPLACE FUNCTION user_create( login text, passwd text, name text, emai
   $$ LANGUAGE SQL VOLATILE;
 
 DROP FUNCTION user_update( id int, login text, passwd text, name text, email text );
-CREATE OR REPLACE FUNCTION user_update( id int, login text, passwd text, name text, email text )
-  RETURNS void AS $$
-    IF $3='' THEN
-      UPDATE users SET (login, passwd, name, email) = ($2, $3, $4, $5) WHERE id=$1 RETURNING id;
-    ELSE
-      UPDATE users SET (login, name, email) = ($2, $4, $5) WHERE id=$1 RETURNING id;
-    END IF;
-$$ LANGUAGE SQL VOLATILE;
 
 /*
+CREATE OR REPLACE FUNCTION user_update( id int, login text, passwd text, name text, email text )
+  RETURNS void AS $$
+IF $3='' THEN
+UPDATE users SET (login, passwd, name, email) = ($2, $3, $4, $5) WHERE id=$1 RETURNING id;
+ELSE
+UPDATE users SET (login, name, email) = ($2, $4, $5) WHERE id=$1 RETURNING id;
+END IF;
+$$ LANGUAGE SQL VOLATILE;
+ */
 
 CREATE OR REPLACE FUNCTION user_update( id int, login text, passwd text, name text, email text )
   RETURNS int AS $$
@@ -46,6 +47,4 @@ CREATE OR REPLACE FUNCTION user_update( id int, login text, passwd text, name te
       ELSE FALSE
     END
     RETURNING id;
-  $$ LANGUAGE SQL VOLATILE;
-
-*/
+$$ LANGUAGE SQL VOLATILE;

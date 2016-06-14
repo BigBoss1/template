@@ -63,6 +63,17 @@ class DB
             "INSERT INTO users (login, passwd, name, email, reg_date) VALUES($1, $2, $3, $4, $5)",
             array($login, md5($passwd), $name, $email, $reg_date));
     }
+
+    function get_users($id = null)
+    {
+        if ($id) {
+            $resource = pg_query_params($this->conn, "SELECT * FROM get_users($1)", $id);
+            return $this->one_row($resource);
+        }
+        else
+            $resource = pg_query($this->conn, "SELECT * FROM get_users(null)");
+        return $this->all_rows($resource);
+    }
 }
 
 $db = new DB("dbname=mult user=mult");

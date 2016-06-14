@@ -8,7 +8,10 @@ require_once("classes/helpers.php");
 if (!$user->is_auth())
     header("Location: index.php");
 
-$profile = $user->get_profile();
+if (get_or_post("id") && $user->is_admin())
+    $profile = $db->get_users(get_or_post("id"));
+else
+    $profile = $user->get_profile();
 
 if (get_or_post("act") == "edit")
 {
