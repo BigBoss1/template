@@ -40,8 +40,7 @@ class DB
 
     function check_auth($login, $passwd)
     {
-        $resource = pg_query_params($this->conn, "SELECT id, login, name, email, is_admin, reg_date, last_login
-            FROM users WHERE login=$1 AND passwd=$2 AND NOT disabled", array($login, md5($passwd)));
+        $resource = pg_query_params($this->conn, "SELECT * FROM auth($1, $2)", array($login, md5($passwd)));
         return $this->one_row($resource);
     }
 
@@ -59,20 +58,25 @@ class DB
 
     function create_profile($login, $passwd, $name, $email, $reg_date)
     {
-        return pg_query_params($this->conn,
-            "INSERT INTO users (login, passwd, name, email, reg_date) VALUES($1, $2, $3, $4, $5)",
+        return pg_query_params($this->conn, "SELECT * FROM user_create($1, $2, $3, $4, $5)",
             array($login, md5($passwd), $name, $email, $reg_date));
     }
 
     function get_users($id = null)
     {
         if ($id) {
-            $resource = pg_query_params($this->conn, "SELECT * FROM get_users($1)", $id);
+            $resource = pg_query_params($this->conn, "SELECT * FROM get_users($1)", array($id));
             return $this->one_row($resource);
         }
         else
             $resource = pg_query($this->conn, "SELECT * FROM get_users(null)");
         return $this->all_rows($resource);
+    }
+
+    function get_rights($id)
+    {
+        $resource = pg_query_params($this->conn, "SELECT * FROM get_rights($1)", array($id));
+        return $this->one_row($resource);
     }
 }
 

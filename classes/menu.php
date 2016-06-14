@@ -23,7 +23,7 @@ class Menu
                 $html .= "<a href='" . $m['url'] . "'>" . $m['name'] . "</a> | ";
             elseif ($user->is_auth())
             {
-                if ($m['allowed'] == "users" || ($user->is_admin() && $m['allowed'] == "admins"))
+                if ($m['allowed'] == "users" || ($user->has_rights("users_upd") && $m['allowed'] == "admins"))
                     $html .= "<a href='" . $m['url'] . "'>" . $m['name'] . "</a> | ";
             }
             elseif ($m['allowed'] == "guests")

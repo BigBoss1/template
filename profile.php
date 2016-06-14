@@ -8,19 +8,27 @@ require_once("classes/helpers.php");
 if (!$user->is_auth())
     header("Location: index.php");
 
-if (get_or_post("id") && $user->is_admin())
-    $profile = $db->get_users(get_or_post("id"));
-else
+$profile['is_owner'] = !(get_or_post("id") && $user->has_rights("users_upd"));
+//Shows what profile is going to be updated (owner's profile or profile of another user)
+
+if ($profile['is_owner'])
     $profile = $user->get_profile();
+else
+    $profile = $db->get_users(get_or_post("id"));
 
 if (get_or_post("act") == "edit")
 {
     if ($user->update_profile(
+        ($profile['is_owner']) ? $profile['id'] : get_or_post("id"),
         get_or_post("login", $profile['login']),
-        get_or_post("passwd"),
+        get_or_post("passwd", null),
         get_or_post("name", $profile['name']),
         get_or_post("email", $profile['email'])))
+    {
         header("Location: profile.php");
+        Session::store_session();
+        exit(0);
+    }
 }
 
 HTML::header($profile['name']);

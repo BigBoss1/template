@@ -22,4 +22,4 @@ require_once("classes/helpers.php");
         <td><?php echo $args['last_login']; ?></td>
     </tr>
 </table>
-<p><a href="profile.php?view=edit">Редактировать</a></p>
+<p><a href="profile.php?<?php if (!$profile['is_owner']) echo "id=" . $args['id'] . "&"; ?>view=edit">Редактировать</a></p>

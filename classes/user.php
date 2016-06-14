@@ -58,6 +58,7 @@ class User
         if (($this->profile = $db->check_auth($login, $password)) !== null)
         {
             $this->authenticated = true;
+            $this->profile['rights'] = $db->get_rights($this->profile['id']);
             $this->set_session();
             return true;
         }
@@ -66,16 +67,19 @@ class User
         return false;
     }
 
-    function update_profile($login, $passwd, $name, $email)
+    function update_profile($id, $login, $passwd, $name, $email)
     {
         global $db;
 
-        if ($db->update_profile($this->profile['id'], $login, $passwd, $name, $email))
+        if ($db->update_profile($id, $login, $passwd, $name, $email))
         {
-            $this->profile['login'] = $login;
-            $this->profile['name'] = $name;
-            $this->profile['email'] = $email;
-            $this->set_session();
+            if ($this->profile['login'] == $id)
+            {
+                $this->profile['login'] = $login;
+                $this->profile['name'] = $name;
+                $this->profile['email'] = $email;
+                $this->set_session();
+            }
             return true;
         }
         return false;
@@ -85,13 +89,9 @@ class User
     {
         global $db;
 
-        if ($db->create_profile($login, $passwd, $name, $email, $reg_date))
+        if ($this->profile = $db->create_profile($login, $passwd, $name, $email, $reg_date))
         {
             $this->authenticated = true;
-            $this->profile['login'] = $login;
-            $this->profile['name'] = $name;
-            $this->profile['email'] = $email;
-            $this->profile['reg_date'] = $reg_date;
             $this->set_session();
             return true;
         }
@@ -111,6 +111,11 @@ class User
     function get_profile()
     {
         return $this->profile;
+    }
+
+    function has_rights($rights)
+    {
+        return ($this->profile['rights'][$rights] == 't') ? true : false;
     }
 }
 

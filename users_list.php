@@ -6,7 +6,10 @@ require_once("classes/menu.php");
 require_once("classes/helpers.php");
 
 if (!$user->is_auth() && !$user->is_admin())
+{
     header("Location: index.php");
+    exit(0);
+}
 
 $users = $db->get_users();
 

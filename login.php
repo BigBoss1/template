@@ -10,6 +10,8 @@ if (get_or_post("act") == "logout")
     $user->fill_unauth();
     $user->set_session();
     header("Location: index.php");
+    Session::store_session();
+    exit(0);
 }
 
 if ($user->is_auth())
@@ -19,7 +21,11 @@ $login = get_or_post("login");
 $pass = get_or_post("pass");
 
 if ($user->authorize($login, $pass))
+{
     header("Location: profile.php");
+    Session::store_session();
+    exit(0);
+}
 
 HTML::header("Вход");
 HTML::template("login");
