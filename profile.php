@@ -1,20 +1,21 @@
 <?php
 
-require_once("classes/html.php");
-require_once("classes/user.php");
-require_once("classes/menu.php");
-require_once("classes/helpers.php");
+require_once("classes/init.php");
 
 if (!$user->is_auth())
     header("Location: index.php");
 
-$profile['is_owner'] = !(get_or_post("id") && $user->has_rights("users_upd"));
+$profile = $user->get_profile();
+$is_owner = !(get_or_post("id") && $user->has_rights("users_upd"));
 //Shows what profile is going to be updated (owner's profile or profile of another user)
 
-if ($profile['is_owner'])
-    $profile = $user->get_profile();
-else
+if (!$is_owner && get_or_post("id") == $profile['id'])
+    $is_owner = !$is_owner;
+
+if (!$is_owner)
     $profile = $db->get_users(get_or_post("id"));
+
+$profile['is_owner'] = $is_owner;
 
 if (get_or_post("act") == "edit")
 {

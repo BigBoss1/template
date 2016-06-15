@@ -3,7 +3,11 @@
 require_once("classes/helpers.php");
 
 ?>
+<?php if ($args['is_owner']) { ?>
 <h1>Добро пожаловать, <?php echo $args['name']; ?>!</h1>
+<?php } else { ?>
+<h1><?php echo $args['name']; ?></h1>
+<?php } ?>
 <table border="1px" cellpadding="5px">
     <tr>
         <td>Логин:</td>
@@ -22,4 +26,4 @@ require_once("classes/helpers.php");
         <td><?php echo $args['last_login']; ?></td>
     </tr>
 </table>
-<p><a href="profile.php?<?php if (!$profile['is_owner']) echo "id=" . $args['id'] . "&"; ?>view=edit">Редактировать</a></p>
+<p><a href="profile.php?<?php if (!$args['is_owner']) echo "id=" . $args['id'] . "&"; ?>view=edit">Редактировать</a></p>
