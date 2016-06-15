@@ -1,0 +1,107 @@
+body
+{
+    background: url(http://www.zastavki.com/pictures/originals/2014/Backgrounds_On_blue_background_wallpaper_082199_.jpg);
+    background-attachment: fixed;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    color: #333333;
+}
+
+#wrapper
+{
+    width: 800px;
+    margin: auto;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+}
+
+#menu
+{
+    text-align: center;
+    background: linear-gradient(#142346, #2321b9);
+    padding: 10px;
+    font-family: Arial;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#menu a
+{
+    color: #ffffff;
+}
+
+#main
+{
+    padding: 25px;
+}
+
+h1
+{
+    color: #2321b9;
+}
+
+a
+{
+    color: #2321b9;
+    text-decoration: none;
+}
+
+td, th
+{
+    border: solid 1px #333333;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+td:hover
+{
+    background: rgb(242, 243, 255);
+}
+
+input[type=text], input[type=password]
+{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input[type=text]:focus, input[type=password]:focus
+{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 2px 2px #2321b9;
+}
+
+table input[type=text], input[type=password]
+{
+    border: none;
+}
+
+table input[type=text]:focus, input[type=password]:focus
+{
+    border: none;
+    padding: 5px;
+    box-shadow: 0px 0px 2px 2px #2321b9;
+}
+
+input[type=submit]
+{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+    background: #2321b9;
+}
+
+input[type=submit]:hover
+{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    color: #2321b9;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 2px #ffffff;
+}

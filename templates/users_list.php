@@ -1,10 +1,9 @@
 <h1>Список пользователей</h1>
-<table border="1px" cellpadding="5px">
+<table cellpadding="5px">
     <tr>
         <th>Имя</th>
         <th>Логин</th>
         <th>E-mail</th>
-        <th>&nbsp;</th>
     </tr>
     <?php for($i = 0; $i < count($args); $i++) { ?>
     <tr>

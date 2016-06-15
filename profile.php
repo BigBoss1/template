@@ -17,22 +17,32 @@ if (!$is_owner)
 
 $profile['is_owner'] = $is_owner;
 
+$res = null;
 if (get_or_post("act") == "edit")
 {
-    if ($user->update_profile(
+    $res = $user->update_profile(
         ($profile['is_owner']) ? $profile['id'] : get_or_post("id"),
-        get_or_post("login", $profile['login']),
-        get_or_post("passwd", null),
-        get_or_post("name", $profile['name']),
-        get_or_post("email", $profile['email'])))
-    {
-        header("Location: profile.php");
-        Session::store_session();
-        exit(0);
-    }
+        get_or_post("login"),
+        get_or_post("passwd"),
+        get_or_post("name"),
+        get_or_post("email"));
 }
 
 HTML::header($profile['name']);
+
+switch ($res)
+{
+    case -1:
+        HTML::template("unique_error");
+        break;
+    case -2:
+        HTML::template("not_null_error");
+        break;
+    case $profile['id']:
+        header("Location: profile.php");
+        Session::store_session();
+        exit(0);
+}
 
 if (get_or_post("view") == "edit")
     HTML::template("edit_profile", $profile);

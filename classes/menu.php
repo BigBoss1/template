@@ -15,7 +15,7 @@ class Menu
     {
         global $user;
 
-        $html = "<p>";
+        $html = "";
 
         foreach (Menu::$menu as $m)
         {
@@ -30,7 +30,7 @@ class Menu
                 $html .= "<a href='" . $m['url'] . "'>" . $m['name'] . "</a> | ";
         }
 
-        $html = substr($html, 0, strlen($html) - 3) . "</p>\n";
+        $html = substr($html, 0, strlen($html) - 3) . "\n";
 
         return $html;
     }

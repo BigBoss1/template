@@ -71,7 +71,7 @@ class HTML
 	static function put_css()
 	{
 		HTML::$css = array_unique(HTML::$css);
-		foreach (HTML::$js as $name)
+		foreach (HTML::$css as $name)
 			echo "<link rel='stylesheet' href='css/" . $name . "' />";
 	}
 }

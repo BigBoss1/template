@@ -29,17 +29,39 @@ if (($x > 5 || $y > 5) && !$user->is_auth())
 	echo "Нужна авторизация.";
 else
 {
-	echo "<table border='1px' cellpadding='5px'>";
-
-	for ($j = 1; $j <= $y; $j++)
+	if ($x <= 18)
 	{
-		echo "<tr align='center'>";
-		for ($i = 1; $i <= $x; $i++)
-			echo "<td title='". $i . " * " . $j. "'>" . $i * $j . "</td>";
-		echo "</tr>";
-	}
+		echo "<table cellpadding='5px' cellspacing='2px'>";
 
-	echo "</table>";
+		for ($j = 1; $j <= $y; $j++) {
+			echo "<tr align='center'>";
+			for ($i = 1; $i <= $x; $i++)
+				echo "<td title='" . $i . " * " . $j . "'>" . $i * $j . "</td>";
+			echo "</tr>";
+		}
+
+		echo "</table>";
+	}
+	else
+	{
+		$a = intval($x / 10);
+		//a - total tables, b - number of current table
+
+		for ($b = 0; $b < $a; $b++)
+		{
+			echo "<p><strong>Таблица №" . ($b + 1) . " (" . (10 * ($b + 1)) . " x " . $y .
+				"):</strong></p><table cellpadding='5px' cellspacing='2px'>";
+
+			for ($j = 1; $j <= $y; $j++) {
+				echo "<tr align='center'>";
+				for ($i = 10 * $b + 1; $i <= 10 * ($b + 1); $i++)
+					echo "<td title='" . $i . " * " . $j . "'>" . $i * $j . "</td>";
+				echo "</tr>";
+			}
+
+			echo "</table>";
+		}
+	}
 }
 
 ?>

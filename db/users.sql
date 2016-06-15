@@ -15,29 +15,41 @@ CREATE OR REPLACE FUNCTION get_users( id int )
   $$ LANGUAGE SQL STABLE;
 
 CREATE OR REPLACE FUNCTION user_create( login text, passwd text, name text, email text, reg_date date )
-  RETURNS TABLE (
-    id int,
-    login text,
-    name text,
-    email text,
-    role text,
-    reg_date date,
-    last_login timestamp
-  ) AS $$
-    INSERT INTO users (login, passwd, name, email, reg_date, last_login) VALUES ($1, $2, $3, $4, $5, NOW());
-    SELECT auth($1, $2);
-  $$ LANGUAGE SQL VOLATILE;
+  RETURNS int AS $$
+    DECLARE
+      i int;
+    BEGIN
+      INSERT INTO users (login, passwd, name, email, reg_date, last_login) VALUES ($1, $2, $3, $4, $5, NOW())
+      RETURNING id INTO i;
+      RETURN i;
+    EXCEPTION
+      WHEN UNIQUE_VIOLATION THEN
+        RETURN -1;
+      WHEN NOT_NULL_VIOLATION THEN
+        RETURN -2;
+    END;
+  $$ LANGUAGE plpgsql VOLATILE;
 
 CREATE OR REPLACE FUNCTION user_update( id int, login text, passwd text, name text, email text )
   RETURNS int AS $$
-    UPDATE users SET (login, passwd, name, email) = ($2,
-      CASE $3 IS NULL
-        WHEN TRUE THEN (SELECT passwd FROM users WHERE  id=$1)
-      ELSE $3
-      END, $4, $5)
-    WHERE id=$1
-    RETURNING id;
-$$ LANGUAGE SQL VOLATILE;
+    DECLARE
+      i int;
+    BEGIN
+      UPDATE users SET (login, passwd, name, email) = ($2,
+        CASE $3 IS NULL
+          WHEN TRUE THEN (SELECT users.passwd FROM users WHERE users.id=$1)
+        ELSE $3
+        END, $4, $5)
+      WHERE users.id=$1
+      RETURNING $1 INTO i;
+      RETURN i;
+    EXCEPTION
+      WHEN UNIQUE_VIOLATION THEN
+        RETURN -1;
+      WHEN NOT_NULL_VIOLATION THEN
+        RETURN -2;
+    END;
+$$ LANGUAGE plpgsql VOLATILE;
 
 CREATE OR REPLACE FUNCTION auth( l_login text, l_passwd text )
   RETURNS TABLE (

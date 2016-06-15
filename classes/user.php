@@ -48,7 +48,9 @@ class User
     function fill_unauth()
     {
         $this->authenticated = false;
-        $this->profile = array();
+        $this->profile = array(
+            "rights" => array("profile_upd" => false, "users_upd" => false)
+        );
     }
 
     function authorize($login, $password)
@@ -70,32 +72,31 @@ class User
     function update_profile($id, $login, $passwd, $name, $email)
     {
         global $db;
+        $res = $db->update_profile($id, $login, $passwd, $name, $email);
 
-        if ($db->update_profile($id, $login, $passwd, $name, $email))
+        if ($this->profile['id'] == $res)
         {
-            if ($this->profile['login'] == $id)
-            {
-                $this->profile['login'] = $login;
-                $this->profile['name'] = $name;
-                $this->profile['email'] = $email;
-                $this->set_session();
-            }
-            return true;
+            $this->profile['login'] = $login;
+            $this->profile['name'] = $name;
+            $this->profile['email'] = $email;
+            $this->set_session();
         }
-        return false;
+
+        return $res;
     }
 
     function create_profile($login, $passwd, $name, $email, $reg_date)
     {
         global $db;
+        $res = $db->create_profile($login, $passwd, $name, $email, $reg_date);
 
-        if ($this->profile = $db->create_profile($login, $passwd, $name, $email, $reg_date))
+        if ($res > 0)
         {
-            $this->authenticated = true;
+            $this->authorize($login, $passwd);
             $this->set_session();
-            return true;
         }
-        return false;
+
+        return $res;
     }
 
     function is_auth()

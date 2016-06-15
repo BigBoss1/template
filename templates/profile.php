@@ -8,7 +8,7 @@ require_once("classes/helpers.php");
 <?php } else { ?>
 <h1><?php echo $args['name']; ?></h1>
 <?php } ?>
-<table border="1px" cellpadding="5px">
+<table cellpadding="5px">
     <tr>
         <td>Логин:</td>
         <td><?php echo $args['login']; ?></td>

@@ -40,42 +40,42 @@ class DB
 
     function check_auth($login, $passwd)
     {
-        $resource = pg_query_params($this->conn, "SELECT * FROM auth($1, $2)", array($login, md5($passwd)));
+        $resource = pg_query_params($this->conn, "SELECT * FROM auth($1, $2)",
+            array($login, md5($passwd))) or die(pg_last_error());
         return $this->one_row($resource);
     }
 
     function update_profile($id, $login, $passwd, $name, $email)
     {
-        if ($passwd)
-            return pg_query_params($this->conn,
-                "UPDATE users SET login=$2, passwd=$3, name=$4, email=$5 WHERE id=$1",
-                array($id, $login, md5($passwd), $name, $email));
-        else
-            return pg_query_params($this->conn,
-                "UPDATE users SET login=$2, name=$3, email=$4 WHERE id=$1",
-                array($id, $login, $name, $email));
+        $resource = pg_query_params($this->conn,
+            "SELECT user_update($1, $2, $3, $4, $5)",
+            array($id, $login, ($passwd) ? md5($passwd) : null, $name, $email)) or die(pg_last_error());
+        return pg_fetch_result($resource, 0, 0);
     }
 
     function create_profile($login, $passwd, $name, $email, $reg_date)
     {
-        return pg_query_params($this->conn, "SELECT * FROM user_create($1, $2, $3, $4, $5)",
-            array($login, md5($passwd), $name, $email, $reg_date));
+        $resource = pg_query_params($this->conn, "SELECT user_create($1, $2, $3, $4, $5)",
+            array($login, ($passwd) ? md5($passwd) : null, $name, $email, $reg_date)) or die(pg_last_error());
+        return pg_fetch_result($resource, 0, 0);
     }
 
     function get_users($id = null)
     {
         if ($id) {
-            $resource = pg_query_params($this->conn, "SELECT * FROM get_users($1)", array($id));
+            $resource = pg_query_params($this->conn, "SELECT * FROM get_users($1)",
+                array($id)) or die(pg_last_error());
             return $this->one_row($resource);
         }
         else
-            $resource = pg_query($this->conn, "SELECT * FROM get_users(null)");
+            $resource = pg_query($this->conn, "SELECT * FROM get_users(null)") or die(pg_last_error());
         return $this->all_rows($resource);
     }
 
     function get_rights($id)
     {
-        $resource = pg_query_params($this->conn, "SELECT * FROM get_rights($1)", array($id));
+        $resource = pg_query_params($this->conn, "SELECT * FROM get_rights($1)",
+            array($id)) or die(pg_last_error());
         return $this->one_row($resource);
     }
 }
