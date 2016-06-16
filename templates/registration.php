@@ -1,7 +1,7 @@
 <h1>Регистрация</h1>
 <form method="post">
     <input type="hidden" name="act" value="registrate">
-    <table border="1px" cellpadding="5px">
+    <table cellpadding="5px" cellspacing='2px'>
         <tr>
             <td>Имя:</td>
             <td><input type="text" name="name" value="<?php echo $args['name']; ?>"></td>

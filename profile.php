@@ -21,11 +21,12 @@ $res = null;
 if (get_or_post("act") == "edit")
 {
     $res = $user->update_profile(
-        ($profile['is_owner']) ? $profile['id'] : get_or_post("id"),
-        get_or_post("login"),
+        ($is_owner) ? $profile['id'] : get_or_post("id"),
+        ($is_owner) ? get_or_post("login") : $profile['login'],
         get_or_post("passwd"),
         get_or_post("name"),
-        get_or_post("email"));
+        get_or_post("email"),
+        get_or_post("disabled"));
 }
 
 HTML::header($profile['name']);
@@ -39,7 +40,7 @@ switch ($res)
         HTML::template("not_null_error");
         break;
     case $profile['id']:
-        header("Location: profile.php");
+        header("Location: profile.php" . (($is_owner) ? "" : "?id=" . $profile['id']));
         Session::store_session();
         exit(0);
 }

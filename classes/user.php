@@ -69,11 +69,11 @@ class User
         return false;
     }
 
-    function update_profile($id, $login, $passwd, $name, $email)
+    function update_profile($id, $login, $passwd, $name, $email, $disabled)
     {
         global $db;
-        $res = $db->update_profile($id, $login, $passwd, $name, $email);
-
+        $res = $db->update_profile($id, $login, $passwd, $name, $email, $disabled);
+        
         if ($this->profile['id'] == $res)
         {
             $this->profile['login'] = $login;

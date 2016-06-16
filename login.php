@@ -17,14 +17,17 @@ if ($user->is_auth())
 $login = get_or_post("login");
 $pass = get_or_post("pass");
 
+HTML::header("Вход");
+
 if ($user->authorize($login, $pass))
 {
     header("Location: profile.php");
     Session::store_session();
     exit(0);
 }
+else if ($login != null || $pass != null)
+    HTML::template("login_error");
 
-HTML::header("Вход");
 HTML::template("login");
 HTML::footer();
 

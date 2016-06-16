@@ -31,7 +31,7 @@ else
 {
 	if ($x <= 18)
 	{
-		echo "<table cellpadding='5px' cellspacing='2px'>";
+		echo "<table cellpadding='5px' cellspacing='2px' align='center'>";
 
 		for ($j = 1; $j <= $y; $j++) {
 			echo "<tr align='center'>";
@@ -49,8 +49,8 @@ else
 
 		for ($b = 0; $b < $a; $b++)
 		{
-			echo "<p><strong>Таблица №" . ($b + 1) . " (" . (10 * ($b + 1)) . " x " . $y .
-				"):</strong></p><table cellpadding='5px' cellspacing='2px'>";
+			echo "<p><strong>Таблица №" . ($b + 1) . " (" . (10 * $b + 1) . " - " . (10 * ($b + 1)) . " x " . $y .
+				"):</strong></p><table cellpadding='5px' cellspacing='2px' align='center'>";
 
 			for ($j = 1; $j <= $y; $j++) {
 				echo "<tr align='center'>";

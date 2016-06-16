@@ -45,11 +45,11 @@ class DB
         return $this->one_row($resource);
     }
 
-    function update_profile($id, $login, $passwd, $name, $email)
+    function update_profile($id, $login, $passwd, $name, $email, $disabled)
     {
         $resource = pg_query_params($this->conn,
-            "SELECT user_update($1, $2, $3, $4, $5)",
-            array($id, $login, ($passwd) ? md5($passwd) : null, $name, $email)) or die(pg_last_error());
+            "SELECT user_update($1, $2, $3, $4, $5, $6)",
+            array($id, $login, ($passwd) ? md5($passwd) : null, $name, $email, $disabled)) or die(pg_last_error());
         return pg_fetch_result($resource, 0, 0);
     }
 
