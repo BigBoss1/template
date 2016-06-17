@@ -1,0 +1,720 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2016.6.16)  17 JUN 2016 17:08
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, uk
+rainian, russian, bulgarian, loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/russianb.ldf
+Language: russianb 2008/03/21 v1.1r Russian support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+)
+
+Package babel Warning: No input encoding specified for Russian language on inpu
+t line 136.
+
+Package babel Info: Making " an active character on input line 199.
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2004/10/17 UCS: Unicode input support
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2012/08/28 UCS: Unicode global data
+)
+\uc@secondtry=\count88
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count90
+\float@exts=\toks20
+\float@box=\box26
+\@float@everytoks=\toks21
+\@floatcapt=\box27
+) (./report.aux
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+))
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count91
+\scratchdimen=\dimen106
+\scratchbox=\box28
+\nofMPsegments=\count92
+\nofMParguments=\count93
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count94
+\MPscratchDim=\dimen107
+\MPnumerator=\count95
+\makeMPintoPDFobject=\count96
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-4.def
+File: uni-4.def 2012/08/28 UCS: Unicode data U+0400..U+04FF
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
+File: uni-33.def 2012/08/28 UCS: Unicode data U+2100..U+21FF
+) [1
+
+{/usr/share/texlive/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 10.
+)
+\tf@toc=\write3
+\openout3 = `report.toc'.
+
+ [1]
+Overfull \hbox (0.61005pt too wide) in paragraph at lines 47--48
+\T2A/cmr/m/n/10 Летняя учебно-исследовательская прак-ти-ка бы-ла по-све-ще-на и
+зу-че-нию Web-
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+
+Overfull \hbox (3.15723pt too wide) in paragraph at lines 72--73
+[]\T2A/cmr/bx/n/10 Использование ин-тер-при-ти-ру-е-мых язы-ков про-грам-ми-ро-
+ва-ния 
+ []
+
+[2] [3]
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 117
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+) [4]
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 198--198
+[]    \T2A/cmtt/m/n/10 static public function header( $title = "" ) //Генерация
+ заголовка[] 
+ []
+
+
+Overfull \hbox (11.91284pt too wide) in paragraph at lines 198--198
+[]        \T2A/cmtt/m/n/10 if (file_exists(HTML::$templates_dir . $name . ".met
+a.php"))[] 
+ []
+
+
+Overfull \hbox (53.90259pt too wide) in paragraph at lines 198--198
+[]            \T2A/cmtt/m/n/10 HTML::$templates[] = array($name . ".meta", arra
+y(), TYPE_META);[] 
+ []
+
+[5]
+Overfull \hbox (90.64362pt too wide) in paragraph at lines 198--198
+[]            \T2A/cmtt/m/n/10 echo "<script type='text/javascript' src='js/" .
+ $name . "'></script>";[] 
+ []
+
+
+Overfull \hbox (6.66412pt too wide) in paragraph at lines 198--198
+[]    \T2A/cmtt/m/n/10 static function include_css($name) //Сбор необходимы CSS
+ файлов[] 
+ []
+
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 198--198
+[]            \T2A/cmtt/m/n/10 echo "<link rel='stylesheet' href='css/" . $name
+ . "' />";[] 
+ []
+
+
+Overfull \hbox (11.91284pt too wide) in paragraph at lines 225--225
+[]\T2A/cmtt/m/n/10 Таким образом страница index.php "достает" код из файлов hea
+der.php,[] 
+ []
+
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 225--225
+[]\T2A/cmtt/m/n/10 index.php, footer.php из дирекотрии temlates, объединяет его
+ и выводит[] 
+ []
+
+
+Overfull \hbox (38.15643pt too wide) in paragraph at lines 225--225
+[]\T2A/cmtt/m/n/10 на экран. Если нужно сделать какие-то операции на языке PHP,
+ они делаются[] 
+ []
+
+
+Overfull \hbox (32.90771pt too wide) in paragraph at lines 225--225
+[]\T2A/cmtt/m/n/10 перед поключением этих шаблонов, а потом просто передаются и
+х результаты[] 
+ []
+
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 225--225
+[]\T2A/cmtt/m/n/10 в качестве параметров, и чтобы изменить представление этих п
+араметров,[] 
+ []
+
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 225--225
+[]\T2A/cmtt/m/n/10 достаточно изменить файл index.php в директории templates, п
+ри этом не[] 
+ []
+
+[6]
+Overfull \hbox (11.91284pt too wide) in paragraph at lines 290--290
+[]        \T2A/cmtt/m/n/10 if (file_put_contents(Session::$session_dir . Sessio
+n::$uid,[] 
+ []
+
+
+Overfull \hbox (64.40002pt too wide) in paragraph at lines 290--290
+[]        \T2A/cmtt/m/n/10 Session::$data = unserialize(file_get_contents(Sessi
+on::$session_dir .[] 
+ []
+
+
+Overfull \hbox (59.1513pt too wide) in paragraph at lines 290--290
+[]    \T2A/cmtt/m/n/10 static public function set($name, $value) //Добавление п
+арамерта в сессию[] 
+ []
+
+
+Overfull \hbox (17.16156pt too wide) in paragraph at lines 290--290
+[]    \T2A/cmtt/m/n/10 static public function get($name) //Получение параметра 
+из сессии[] 
+ []
+
+[7]
+Overfull \hbox (64.40002pt too wide) in paragraph at lines 290--290
+[]\T2A/cmtt/m/n/10 На каждой странице в начале должна запускаться сессия. Если 
+пользователь зашел[] 
+ []
+
+
+Overfull \hbox (32.90771pt too wide) in paragraph at lines 290--290
+[]\T2A/cmtt/m/n/10 первый раз за сеанс, ему дается кука, иначе по этой куке с ф
+айла сервера[] 
+ []
+
+
+Overfull \hbox (43.40515pt too wide) in paragraph at lines 290--290
+[]\T2A/cmtt/m/n/10 загружается информация об этой сессии. Сохранение сессии в ф
+айл на сервере[] 
+ []
+
+
+Overfull \hbox (11.91284pt too wide) in paragraph at lines 290--290
+[]\T2A/cmtt/m/n/10 следует делать после какого-либо изменения каких либо-данных
+ сессии.[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 386--386
+[]    \T2A/cmtt/m/n/10 function __construct($conn_string = "") //Подключение к 
+СУБД PostgreSQL[] 
+ []
+
+
+Overfull \hbox (6.66412pt too wide) in paragraph at lines 386--386
+[]    \T2A/cmtt/m/n/10 function one_row($resource) //Получение одной строки по 
+ресурсу[] 
+ []
+
+[8]
+Overfull \hbox (1.4154pt too wide) in paragraph at lines 386--386
+[]    \T2A/cmtt/m/n/10 function all_rows($resource) //Получение всех строк из р
+есурса[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 386--386
+[]    \T2A/cmtt/m/n/10 //Следующие функции получают из БД какую-любо информацию
+ о пользователе[] 
+ []
+
+
+Overfull \hbox (38.15643pt too wide) in paragraph at lines 386--386
+[]    \T2A/cmtt/m/n/10 //Они используют SQL-функции на стороне СУБД, о которых 
+есть в других[] 
+ []
+
+
+Overfull \hbox (64.40002pt too wide) in paragraph at lines 386--386
+[]        \T2A/cmtt/m/n/10 $resource = pg_query_params($this->conn, "SELECT * F
+ROM auth($1, $2)",[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 386--386
+[]    \T2A/cmtt/m/n/10 function update_profile($id, $login, $passwd, $name, $em
+ail, $disabled)[] 
+ []
+
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 386--386
+[]    \T2A/cmtt/m/n/10 function create_profile($login, $passwd, $name, $email, 
+$reg_date)[] 
+ []
+
+
+Overfull \hbox (95.89233pt too wide) in paragraph at lines 386--386
+[]        \T2A/cmtt/m/n/10 $resource = pg_query_params($this->conn, "SELECT use
+r_create($1, $2, $3, $4,[] 
+ []
+
+
+Overfull \hbox (111.63849pt too wide) in paragraph at lines 386--386
+[]        \T2A/cmtt/m/n/10 $5)", array($login, ($passwd) ? md5($passwd) : null,
+ $name, $email, $reg_date))[] 
+ []
+
+
+Overfull \hbox (90.64362pt too wide) in paragraph at lines 386--386
+[]            \T2A/cmtt/m/n/10 $resource = pg_query_params($this->conn, "SELECT
+ * FROM get_users($1)",[] 
+ []
+
+
+Overfull \hbox (64.40002pt too wide) in paragraph at lines 386--386
+[]            \T2A/cmtt/m/n/10 $resource = pg_query($this->conn, "SELECT * FROM
+ get_users(null)")[] 
+ []
+
+[9]
+Overfull \hbox (74.89746pt too wide) in paragraph at lines 386--386
+[]        \T2A/cmtt/m/n/10 $resource = pg_query_params($this->conn, "SELECT * F
+ROM get_rights($1)",[] 
+ []
+
+
+Overfull \hbox (53.90259pt too wide) in paragraph at lines 491--491
+[]\T2A/cmtt/m/n/10 --Вывод пользователя по id, если id не передан, то выводит в
+се пользователей[] 
+ []
+
+
+Overfull \hbox (53.90259pt too wide) in paragraph at lines 491--491
+[]    \T2A/cmtt/m/n/10 SELECT id, login, name, email, reg_date, last_login, dis
+abled FROM users[] 
+ []
+
+
+Overfull \hbox (43.40515pt too wide) in paragraph at lines 491--491
+[]      \T2A/cmtt/m/n/10 INSERT INTO users (login, passwd, name, email, reg_dat
+e, last_login)[] 
+ []
+
+[10]
+Overfull \hbox (17.16156pt too wide) in paragraph at lines 491--491
+[]\T2A/cmtt/m/n/10 id int, login text, passwd text, name text, email text, disa
+bled bool[] 
+ []
+
+
+Overfull \hbox (11.91284pt too wide) in paragraph at lines 491--491
+[]      \T2A/cmtt/m/n/10 UPDATE users SET (login, passwd, name, email, disabled
+) = ($2,[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 491--491
+[]          \T2A/cmtt/m/n/10 WHEN TRUE THEN (SELECT users.passwd FROM users WHE
+RE users.id=$1)[] 
+ []
+
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 491--491
+[]      \T2A/cmtt/m/n/10 WHERE users.login=$1 AND users.passwd=$2 AND NOT users
+.disabled;[] 
+ []
+
+
+Overfull \hbox (74.89746pt too wide) in paragraph at lines 491--491
+[]      \T2A/cmtt/m/n/10 UPDATE users SET last_login=NOW() WHERE users.login=$1
+ AND users.passwd=$2[] 
+ []
+
+[11]
+Overfull \hbox (90.64362pt too wide) in paragraph at lines 491--491
+[]        \T2A/cmtt/m/n/10 FROM users WHERE users.login=$1 AND users.passwd=$2 
+AND NOT users.disabled;[] 
+ []
+
+
+Overfull \hbox (17.16156pt too wide) in paragraph at lines 628--628
+[]        \T2A/cmtt/m/n/10 if (($sess_data = Session::get(User::$session_key)) 
+=== null)[] 
+ []
+
+[12]
+Overfull \hbox (122.13593pt too wide) in paragraph at lines 628--628
+[]            \T2A/cmtt/m/n/10 array('authenticated' => $this->authenticated, '
+profile' => $this->profile));[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 628--628
+[]            \T2A/cmtt/m/n/10 "rights" => array("profile_upd" => false, "users
+_upd" => false)[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 628--628
+[]        \T2A/cmtt/m/n/10 if (($this->profile = $db->check_auth($login, $passw
+ord)) !== null)[] 
+ []
+
+
+Overfull \hbox (59.1513pt too wide) in paragraph at lines 628--628
+[]            \T2A/cmtt/m/n/10 $this->profile['rights'] = $db->get_rights($this
+->profile['id']);[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 628--628
+[]    \T2A/cmtt/m/n/10 function update_profile($id, $login, $passwd, $name, $em
+ail, $disabled)[] 
+ []
+
+
+Overfull \hbox (90.64362pt too wide) in paragraph at lines 628--628
+[]        \T2A/cmtt/m/n/10 $res = $db->update_profile($id, $login, $passwd, $na
+me, $email, $disabled);[] 
+ []
+
+[13]
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 628--628
+[]    \T2A/cmtt/m/n/10 function create_profile($login, $passwd, $name, $email, 
+$reg_date)[] 
+ []
+
+
+Overfull \hbox (64.40002pt too wide) in paragraph at lines 628--628
+[]        \T2A/cmtt/m/n/10 $res = $db->create_profile($login, $passwd, $name, $
+email, $reg_date);[] 
+ []
+
+
+Overfull \hbox (43.40515pt too wide) in paragraph at lines 628--628
+[]    \T2A/cmtt/m/n/10 function is_auth() //Проверка, является ли пользователь 
+авторизованным[] 
+ []
+
+
+Overfull \hbox (53.90259pt too wide) in paragraph at lines 628--628
+[]    \T2A/cmtt/m/n/10 function is_admin() //Проверка, является ли пользователь
+ администратором[] 
+ []
+
+
+Overfull \hbox (38.15643pt too wide) in paragraph at lines 628--628
+[]        \T2A/cmtt/m/n/10 return ($this->profile['rights'][$rights] == 't') ? 
+true : false;[] 
+ []
+
+
+Overfull \hbox (48.65387pt too wide) in paragraph at lines 628--628
+[]\T2A/cmtt/m/n/10 //Чтобы понят принцип работы этих функций, необходимо ознако
+мится с файлами[] 
+ []
+
+[14] [15]
+Overfull \hbox (69.64874pt too wide) in paragraph at lines 700--700
+[]  \T2A/cmtt/m/n/10 printf("<html><head><title>Test</title><meta charset='utf-
+8' /></head><body>"[] 
+ []
+
+
+Overfull \hbox (69.64874pt too wide) in paragraph at lines 700--700
+[]   \T2A/cmtt/m/n/10 "<form><label for='x'>X:</label> <input type='text' name=
+'x' value='%d' /> "[] 
+ []
+
+
+Overfull \hbox (38.15643pt too wide) in paragraph at lines 700--700
+[]   \T2A/cmtt/m/n/10 "<label for='x'>Y:</label> <input type='text' name='y' va
+lue='%d' /> "[] 
+ []
+
+
+Overfull \hbox (1.4154pt too wide) in paragraph at lines 700--700
+[]   \T2A/cmtt/m/n/10 "<input type='submit' value='Считать' /></form><table>", 
+x, y);[] 
+ []
+
+[16] [17]
+Package epstopdf Info: Source file: <1.eps>
+(epstopdf)                    date: 2016-06-17 16:35:28
+(epstopdf)                    size: 12606965 bytes
+(epstopdf)             Output file: <1-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-17 17:08:22
+(epstopdf)                    size: 709268 bytes
+(epstopdf)             Command: <repstopdf --outfile=1-eps-converted-to.pdf 1.e
+ps>
+(epstopdf)             \includegraphics on input line 781.
+Package epstopdf Info: Output file is already uptodate.
+ <1-eps-converted-to.pdf, id=72, 1927.2pt x 1084.05pt>
+File: 1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1-eps-converted-to.pdf>
+Package pdftex.def Info: 1-eps-converted-to.pdf used on input line 781.
+(pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
+Package epstopdf Info: Source file: <2.eps>
+(epstopdf)                    date: 2016-06-17 16:35:48
+(epstopdf)                    size: 12606965 bytes
+(epstopdf)             Output file: <2-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-17 17:08:26
+(epstopdf)                    size: 708213 bytes
+(epstopdf)             Command: <repstopdf --outfile=2-eps-converted-to.pdf 2.e
+ps>
+(epstopdf)             \includegraphics on input line 786.
+Package epstopdf Info: Output file is already uptodate.
+
+<2-eps-converted-to.pdf, id=73, 1927.2pt x 1084.05pt>
+File: 2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 2-eps-converted-to.pdf>
+Package pdftex.def Info: 2-eps-converted-to.pdf used on input line 786.
+(pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
+Package epstopdf Info: Source file: <3.eps>
+(epstopdf)                    date: 2016-06-17 16:36:04
+(epstopdf)                    size: 12606965 bytes
+(epstopdf)             Output file: <3-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-17 17:08:31
+(epstopdf)                    size: 698730 bytes
+(epstopdf)             Command: <repstopdf --outfile=3-eps-converted-to.pdf 3.e
+ps>
+(epstopdf)             \includegraphics on input line 791.
+Package epstopdf Info: Output file is already uptodate.
+
+<3-eps-converted-to.pdf, id=74, 1927.2pt x 1084.05pt>
+File: 3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 3-eps-converted-to.pdf>
+Package pdftex.def Info: 3-eps-converted-to.pdf used on input line 791.
+(pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <4.eps>
+(epstopdf)                    date: 2016-06-17 16:36:19
+(epstopdf)                    size: 12606965 bytes
+(epstopdf)             Output file: <4-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-17 17:08:35
+(epstopdf)                    size: 721691 bytes
+(epstopdf)             Command: <repstopdf --outfile=4-eps-converted-to.pdf 4.e
+ps>
+(epstopdf)             \includegraphics on input line 796.
+Package epstopdf Info: Output file is already uptodate.
+<4-eps-converted-to.pdf, id=75, 1927.2pt x 1084.05pt>
+File: 4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 4-eps-converted-to.pdf>
+Package pdftex.def Info: 4-eps-converted-to.pdf used on input line 796.
+(pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <5.eps>
+(epstopdf)                    date: 2016-06-17 16:36:34
+(epstopdf)                    size: 12606965 bytes
+(epstopdf)             Output file: <5-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-17 17:08:40
+(epstopdf)                    size: 658266 bytes
+(epstopdf)             Command: <repstopdf --outfile=5-eps-converted-to.pdf 5.e
+ps>
+(epstopdf)             \includegraphics on input line 801.
+Package epstopdf Info: Output file is already uptodate.
+<5-eps-converted-to.pdf, id=76, 1927.2pt x 1084.05pt>
+File: 5-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 5-eps-converted-to.pdf>
+Package pdftex.def Info: 5-eps-converted-to.pdf used on input line 801.
+(pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 <./1-eps-converted-to.pdf> <./2-eps-converted-to.pdf>] [19 <./3-eps-convert
+ed-to.pdf> <./4-eps-converted-to.pdf> <./5-eps-converted-to.pdf>] (./report.aux
+) ) 
+Here is how much of TeX's memory you used:
+ 3776 strings out of 494820
+ 49217 string characters out of 3178049
+ 106580 words of memory out of 3000000
+ 6895 multiletter control sequences out of 15000+200000
+ 12111 words of font info for 25 fonts, out of 3000000 for 9000
+ 198 hyphenation exceptions out of 8191
+ 37i,10n,43p,1397b,692s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/cm-super/sfbx1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm
+-super/sfrm0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/
+sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm120
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on report.pdf (20 pages, 3773524 bytes).
+PDF statistics:
+ 142 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+

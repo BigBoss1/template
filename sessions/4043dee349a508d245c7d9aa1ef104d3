@@ -1,0 +1,1 @@
+a:1:{s:9:"user_info";a:2:{s:13:"authenticated";b:1;s:7:"profile";a:7:{s:2:"id";s:1:"1";s:5:"login";s:5:"admin";s:4:"name";s:5:"Admin";s:5:"email";s:13:"admin@test.ru";s:8:"reg_date";s:10:"2016-06-08";s:10:"last_login";s:26:"2016-06-16 19:52:02.763399";s:6:"rights";a:2:{s:11:"profile_upd";s:1:"t";s:9:"users_upd";s:1:"t";}}}}
